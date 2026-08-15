@@ -458,22 +458,14 @@
         font-size: 22px;
       }
 
-      .hero-banner {
-        min-height: 520px;
-        background: linear-gradient(135deg, var(--purple), var(--pink));
-      }
-
       .hero-banner img {
         width: 100%;
-        height: 100%;
-        min-height: 520px;
-        object-fit: cover;
-        object-position: 85% 80%;
+        height: auto;
       }
 
       .hero-overlay {
         top: 0;
-        padding: 24px 25px 20px;
+        padding: 28px 25px 20px;
       }
 
       .hero-slogan {
@@ -541,6 +533,8 @@
     </div>
     <div class="hero-banner">
       <picture>
+        <source media="(max-width: 768px)" srcset="images/hero-bg-mobile.webp" type="image/webp">
+        <source media="(max-width: 768px)" srcset="images/hero-bg-mobile.jpg" type="image/jpeg">
         <source srcset="images/hero-bg.webp" type="image/webp">
         <img src="images/hero-bg.jpg" alt="張美月" width="1708" height="960" loading="eager">
       </picture>
