@@ -103,6 +103,8 @@
       --black: #000000;
       --gradient: linear-gradient(135deg, var(--purple), var(--pink));
       --font: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      /* VK confirmed values — do not change without VK approval */
+      --pill-gap: 10px;
     }
 
     html {
@@ -566,8 +568,8 @@
 
       .hero-credentials {
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 10px;
+        gap: var(--pill-gap);
+        margin-bottom: var(--pill-gap);
       }
 
       .credential-tag {
