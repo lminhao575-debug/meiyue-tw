@@ -105,41 +105,96 @@
       background: var(--white);
     }
 
+    .hero-top {
+      padding: 28px 40px 20px;
+    }
+
+    .hero-top-label {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
     .hero-banner {
+      position: relative;
       width: 100%;
       overflow: hidden;
     }
 
+    .hero-banner picture,
     .hero-banner img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .hero-cta-wrap {
-      text-align: center;
-      padding: 32px 24px;
-      background: linear-gradient(180deg, #fce4f6 0%, var(--white) 100%);
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 5%;
+    }
+
+    .hero-slogan {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.25;
+      color: var(--white);
+      margin-bottom: 12px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-tagline {
+      font-size: clamp(22px, 3vw, 32px);
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .credential-tag {
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--white);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 22px;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
     }
 
     .hero-cta {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--gradient);
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid var(--white);
       color: var(--white);
       text-decoration: none;
-      padding: 16px 36px;
+      padding: 12px 28px;
       border-radius: 50px;
       font-size: 22px;
       font-weight: 600;
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 20px rgba(203, 108, 230, 0.3);
+      transition: transform 0.3s, background 0.3s;
+      backdrop-filter: blur(4px);
+      width: fit-content;
     }
 
     .hero-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(203, 108, 230, 0.4);
+      background: rgba(255, 255, 255, 0.35);
     }
 
     /* ===== SECTION COMMON ===== */
@@ -388,6 +443,28 @@
         display: block;
       }
 
+      .hero-top {
+        padding: 20px 20px 16px;
+      }
+
+      .hero-top-label {
+        font-size: 22px;
+      }
+
+      .hero-overlay {
+        padding: 20px 5%;
+      }
+
+      .credential-tag {
+        font-size: 18px;
+        padding: 6px 14px;
+      }
+
+      .hero-cta {
+        font-size: 20px;
+        padding: 10px 24px;
+      }
+
       .section-title {
         font-size: 30px;
       }
@@ -423,14 +500,23 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-top">
+      <span class="hero-top-label">東明里里長參選人</span>
+    </div>
     <div class="hero-banner">
       <picture>
-        <source srcset="images/banner-top.webp" type="image/webp">
-        <img src="images/banner-top.png" alt="30年護理 美月顧厝邊 — 東明里里長參選人 張美月" width="1366" height="768" loading="eager">
+        <source srcset="images/hero-bg.webp" type="image/webp">
+        <img src="images/hero-bg.jpg" alt="張美月" width="1708" height="960" loading="eager">
       </picture>
-    </div>
-    <div class="hero-cta-wrap">
-      <a href="https://lin.ee/q5bhWfq" class="hero-cta" target="_blank" rel="noopener">加 LINE 聊聊 →</a>
+      <div class="hero-overlay">
+        <h1 class="hero-slogan">30年護理<br>美月顧厝邊</h1>
+        <p class="hero-tagline">顧老也顧幼 社區活起來</p>
+        <div class="hero-credentials">
+          <span class="credential-tag">高醫護理博士</span>
+          <span class="credential-tag">失智老人守護講師</span>
+        </div>
+        <a href="https://lin.ee/q5bhWfq" class="hero-cta" target="_blank" rel="noopener">加 LINE 聊聊</a>
+      </div>
     </div>
   </section>
 
